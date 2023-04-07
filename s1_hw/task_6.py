@@ -14,9 +14,9 @@ def checkForLuck1(num):
         print('Wrong number! Try again!')
         return checkForLuck1(input())
     else:
-        left_side = int(num) // 10 ** (len(num)/2)
+        left_side = int(num[:len(num)//2])
         left_sum = 0
-        right_side = int(num) % 10 ** (len(num)/2)
+        right_side = int(num[len(num)//2:])
         right_sum = 0
         while left_side > 0:
             left_digit = left_side % 10
