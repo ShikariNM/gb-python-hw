@@ -11,3 +11,6 @@ while num > 0:
     res += digit
     num //= 10
 print(res)
+
+from functools import reduce
+print(reduce(lambda a, b: a + b, map(int, input())))
