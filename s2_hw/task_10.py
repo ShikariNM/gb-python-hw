@@ -7,7 +7,7 @@
 # Пример
 # Ввод: 1 1 0 0 0 -> Вывод: 2
 
-coins = list(map(int, input().split()))
+coins = map(int, input().split())
 count0 = 0
 count1 = 0
 for coin in coins:
