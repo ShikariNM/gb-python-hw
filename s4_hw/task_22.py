@@ -2,11 +2,15 @@
 # Выдать без повторений в порядке возрастания все те числа,
 # которые встречаются в обоих наборах.
 # Пользователь вводит в строку первый список затем на следующией строке второй список.
+
 from random import randint
 
-list_1 = [randint(0, 20) for i in range(10)]
-list_2 = [randint(0, 20) for i in range(10)]
-print(list_1)
-print(list_2)
+set_1 = set([el for el in input().split()])
+set_2 = set([el for el in input().split()])
 
-print(set(sorted(list_1 + list_2)))
+# set_1 = set([randint(0, 9) for i in range(20)])
+# set_2 = set([randint(0, 9) for i in range(20)])
+# print(set_1)
+# print(set_2)
+
+print(sorted(set_1.intersection(set_2)))

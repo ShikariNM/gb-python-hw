@@ -19,3 +19,5 @@ for el in A:
     if abs(el-X) < abs(nearest-X):
         nearest = el
 print(nearest)
+
+print(min(A, key=lambda y: abs(y - X)))

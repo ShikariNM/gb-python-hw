@@ -27,6 +27,7 @@ for i in range(len(bushes)):
 
 print(max_sum)
 
+# или
 
 max_sum_2 = max([sum(bushes[i-2:i+1]) for i in range(len(bushes))])
 
