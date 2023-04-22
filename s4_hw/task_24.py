@@ -17,18 +17,19 @@ from random import randint
 
 num = int(input())
 bushes = [randint(0, 100) for i in range(num)]
-print(bushes)
+
 max_sum = 0
 for i in range(len(bushes)):
-    res = sum(bushes[i-2:i+1])
+    res = sum([bushes[i-2], bushes[i-1], bushes[i]])
+    print(res)
     if res > max_sum:
         max_sum = res
         resi = i
-
+print()
 print(max_sum)
 
 # или
 
-max_sum_2 = max([sum(bushes[i-2:i+1]) for i in range(len(bushes))])
+max_sum_2 = max([sum([bushes[i-2], bushes[i-1], bushes[i]]) for i in range(len(bushes))])
 
 print(max_sum_2)
