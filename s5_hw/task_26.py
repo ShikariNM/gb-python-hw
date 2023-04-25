@@ -4,7 +4,9 @@
 # A = 2; B = 3 -> 8
 
 def exponentiation(num, exp):
-    if exp == 1:
+    if exp == 0:
+        return 1
+    elif exp == 1:
         return num
     return exponentiation(num, exp - 1) * num
 
